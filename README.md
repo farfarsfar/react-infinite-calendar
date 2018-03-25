@@ -125,6 +125,43 @@ Example usage of display options:
 />
 ```
 
+## New 'events' fork features
+From [@Makashov's](https://github.com/Makashov/react-infinite-calendar/) fork.
+
+
+### Basic Example
+```jsx
+  <InfiniteCalendar
+    events={[
+      new Date(2018, 0, 26),
+      new Date(2018, 0, 24),
+    ]}
+    width={Math.min(window.innerWidth, 600)}
+/>
+```
+
+Also you can change color of events with eventsColor param in theming.
+
+```js
+module.exports = {
+  accentColor: '#448AFF',
+  eventsColor: 'rgb(68, 138, 255)',
+  floatingNav: {
+    background: 'rgba(56, 87, 138, 0.94)',
+    chevron: '#FFA726',
+    color: '#FFF',
+  },
+  headerColor: '#448AFF',
+  selectionColor: '#559FFF',
+  textColor: {
+    active: '#FFF',
+    default: '#333',
+  },
+  todayColor: '#FFA726',
+  weekdayColor: '#559FFF',
+};
+```
+
 Dependencies
 ------------
 React Infinite Calendar has very few dependencies. It relies on [`react-tiny-virtual-list`](https://github.com/clauderic/react-tiny-virtual-list) for virtualization and [`date-fns`](https://github.com/date-fns/date-fns) for handling date manipulation. It also uses [recompose](https://github.com/acdlite/recompose) for extending the default functionality. It also has the following peerDependencies: [`react`](https://www.npmjs.com/package/react), and [`react-addons-css-transition-group`](https://www.npmjs.com/package/react-addons-css-transition-group).
